@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout
+android:id="@+id/settingsLayout"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textColor="#000"
+android:layout_gravity="center"
+android:layout_centerHorizontal="true"
+android:background="@drawable/battery300x2v23"
+android:orientation="vertical"
+android:paddingLeft="30dip">
+<LinearLayout android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginTop="27dip">
+
+    <Button android:id="@+id/batterySettings"
+                android:text="Battery"
+                style="@style/SettingsButtonStyle_Large"/>
+
+    <ToggleButton android:layout_height="wrap_content"
+                  android:id="@+id/gpsSettings"
+                  android:textOn="GPS"
+                  android:textOff="GPS"
+                  style="@style/SettingsButtonStyle_Small"/>
+
+</LinearLayout>
+
+<LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="4dip">
+    <Button android:id="@+id/displaySettings"
+            android:text="Display"
+            style="@style/SettingsButtonStyle_Large"/>
+
+    <ToggleButton android:id="@+id/wifiSettings"
+                  android:textOn="Wifi"
+                  android:textOff="Wifi"
+                  style="@style/SettingsButtonStyle_Small"/>
+</LinearLayout>
+
+<LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="4dip">
+
+    <Button android:id="@+id/networkSettings"
+            android:text="Network"
+            style="@style/SettingsButtonStyle_Large"/>
+    <ToggleButton android:id="@+id/bluetoothSettings"
+                  android:textOn="BT"
+                  android:textOff="BT"
+                  style="@style/SettingsButtonStyle_Small"/>
+
+</LinearLayout>
+
+<LinearLayout android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginTop="4dip">
+    <Button android:id="@+id/cleaner"
+            android:text="Show Desktop   "
+            style="@style/SettingsButtonStyle_XLarge"
+            android:layout_marginTop="4dip"/>
+
+    <ImageView android:layout_width="32dp"
+               android:layout_height="32dp"
+               android:src="@drawable/cleaner"
+               android:layout_marginTop="9dip"
+            android:layout_marginLeft="-37dp"
+            android:alpha="0.7"/>
+</LinearLayout>
+
+</LinearLayout>
+</FrameLayout>

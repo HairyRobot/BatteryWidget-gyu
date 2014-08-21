@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BatteryWidgetTheme" parent="@android:style/Theme.Holo.Light.Panel">
+        <item name="android:background">#00ffffff</item>
+    </style>
+</resources>

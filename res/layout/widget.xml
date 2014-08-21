@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:padding="@dimen/widget_margin">
+
+    <RelativeLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp">
+
+    <ImageView
+            android:id="@+id/widgetimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/battery"
+            android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="2dp"
+            android:layout_centerHorizontal="true">
+
+        <ImageView
+                android:id="@+id/bar100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bar_green"
+                android:layout_marginTop="5dip"
+                android:visibility="invisible"
+                />
+        <ImageView
+                android:id="@+id/bar80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bar_green"
+                android:layout_marginTop="2dip"
+                android:visibility="invisible" />
+        <ImageView
+                android:id="@+id/bar60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bar_green"
+                android:layout_marginTop="2dip"
+                android:visibility="invisible"/>
+        <ImageView
+                android:id="@+id/bar40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bar_green"
+                android:layout_marginTop="2dip"
+                android:visibility="invisible" />
+
+        <ImageView
+                android:id="@+id/bar20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bar_red"
+                android:layout_marginTop="2dip"
+                android:visibility="invisible"/>
+
+     </LinearLayout>
+
+   <TextView  
+        android:id="@+id/batterytext"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dip"
+        android:layout_marginLeft="1dp"
+        android:layout_centerHorizontal="true"
+        android:includeFontPadding="false"
+        android:lineSpacingMultiplier="0.9"
+        android:maxLines="1"
+        android:textSize="19sp"
+        android:typeface="sans"
+        android:textColor="#000000"
+        android:text=" 0%"
+        android:visibility="invisible"  />
+     <ImageView
+        android:id="@+id/charging"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:src="@drawable/charging"
+        android:layout_below="@+id/batterytext" 
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SettingsButtonStyle">
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SettingsButtonStyle_Small" parent="SettingsButtonStyle">
+        <item name="android:layout_width">53dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="SettingsButtonStyle_Large" parent="SettingsButtonStyle">
+        <item name="android:layout_width">100dp</item>
+    </style>
+
+    <style name="SettingsButtonStyle_XLarge" parent="SettingsButtonStyle">
+        <item name="android:layout_width">153dp</item>
+    </style>
+
+    <style name="BatteryWidgetTheme" parent="@android:style/Theme.Translucent.NoTitleBar" />
+</resources>
