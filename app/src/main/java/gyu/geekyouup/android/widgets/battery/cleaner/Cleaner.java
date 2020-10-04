@@ -2,6 +2,7 @@ package gyu.geekyouup.android.widgets.battery.cleaner;
 
 import android.app.Activity;
 import android.app.WallpaperManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -38,7 +39,7 @@ public class Cleaner extends Activity {
         mView = (RelativeLayout) findViewById(R.id.mainview);
         mView.setFocusableInTouchMode(false);
 
-        if(android.os.Build.VERSION.SDK_INT>=android.os.Build.VERSION_CODES.HONEYCOMB)
+        if(android.os.Build.VERSION.SDK_INT>= Build.VERSION_CODES.ICE_CREAM_SANDWICH)
         {
             mView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
         }
@@ -76,7 +77,7 @@ public class Cleaner extends Activity {
     		mWPM.setWallpaperOffsets(mView.getWindowToken(), xWP, yWP);
     	}
     	
-    	if(android.os.Build.VERSION.SDK_INT>=android.os.Build.VERSION_CODES.HONEYCOMB)
+    	if(android.os.Build.VERSION.SDK_INT>= Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     	{
     		mView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
     		//Log.d("Cleaner", "Lights out");
