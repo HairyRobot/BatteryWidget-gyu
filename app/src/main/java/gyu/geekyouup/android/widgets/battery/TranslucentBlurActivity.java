@@ -58,7 +58,7 @@ public class TranslucentBlurActivity extends Activity implements OnClickListener
         mBtnWifiSettings = (ToggleButton) findViewById(R.id.wifiSettings);
         mBtnWifiSettings.setOnClickListener(this);
         
-        WifiManager wifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
+        WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
         mBtnWifiSettings.setChecked(wifiManager.isWifiEnabled());
 
         mBtnGPSSettings = (ToggleButton) findViewById(R.id.gpsSettings);
@@ -132,7 +132,7 @@ public class TranslucentBlurActivity extends Activity implements OnClickListener
 				finish();
 			}else if(v== mBtnWifiSettings)
 			{
-				WifiManager wifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
+				WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
 				boolean enabled = wifiManager.isWifiEnabled();
 				wifiManager.setWifiEnabled(!enabled);
 				
