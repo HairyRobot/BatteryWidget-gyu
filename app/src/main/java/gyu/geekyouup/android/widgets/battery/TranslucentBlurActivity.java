@@ -13,6 +13,7 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager; 
 import android.view.View.OnClickListener;
@@ -24,7 +25,7 @@ import gyu.geekyouup.android.widgets.battery.cleaner.Cleaner;
  * <h3>Fancy Blurred Background Activity</h3>
  */
 public class TranslucentBlurActivity extends Activity implements OnClickListener {
-	
+
 	private Button mBtnDisplaySettings;
 	private ToggleButton mBtnWifiSettings;
 	private ToggleButton mBtnGPSSettings;
@@ -49,7 +50,11 @@ public class TranslucentBlurActivity extends Activity implements OnClickListener
 	        getWindow().setFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND,
 	                WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         }
-        
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
+				WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
+				WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
+
         setContentView(R.layout.settings);
 
         mBtnDisplaySettings = (Button) findViewById(R.id.displaySettings);
@@ -118,6 +123,16 @@ public class TranslucentBlurActivity extends Activity implements OnClickListener
         super.onSaveInstanceState(outState);
     }
 
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		if (MotionEvent.ACTION_OUTSIDE == event.getAction())
+		{
+			finish();
+			return true;
+		}
+		return super.onTouchEvent(event);
+	}
 
 	public void onClick(View v) {
 		
