@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "gyu.geekyouup.android.widgets.battery"
-        minSdkVersion 8
+        minSdkVersion 23
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 25
         versionCode 100100
