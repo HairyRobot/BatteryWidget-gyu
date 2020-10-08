@@ -1,7 +1,6 @@
 # Battery Widget
 
-<img src="images/BatteryWidget-gyu1.png" height="400" alt="Screenshot"/>
-<img src="images/BatteryWidget-gyu2.png" height="400" alt="Screenshot"/>
+<img src="images/BatteryWidget-gyu1.png" height="400" alt="Screenshot"/> <img src="images/BatteryWidget-gyu2.png" height="400" alt="Screenshot"/>
 
 This project is based on Battery Widget by Richard Hyndman.  The original open source project became closed source from v1.7.3.
 
